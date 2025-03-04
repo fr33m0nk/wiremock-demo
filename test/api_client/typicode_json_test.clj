@@ -24,6 +24,8 @@
       (try
         (test-fn)
         (finally
+          ;; Clojure 1.12 specific inter op
+          ;; Use (.stop ^WireMockServer wiremock-server) for earlier versions
           (WireMockServer/.stop wiremock-server))))))
 
 (use-fixtures :once (wiremock-fixture-generator port))

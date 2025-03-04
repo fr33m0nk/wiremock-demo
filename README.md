@@ -6,3 +6,7 @@ It can help you to create stable test and development environments, isolate your
 
 ## Demo with Clojure
 The demo is driven by tests [here](./test/api_client/typicode_json_test.clj)
+
+## Note
+Tests use Clojure 1.12 Java interop enhancements which may not work with earlier versions of Clojure.
+So you may have to adapt certain tidbits
